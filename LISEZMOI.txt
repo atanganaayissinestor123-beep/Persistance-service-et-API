@@ -1,0 +1,16 @@
+CarnetDepenses - Phase A (persistance locale JSON) - .NET MAUI
+
+MISE EN PLACE
+1. Visual Studio : créer un projet ".NET MAUI App" nommé exactement "CarnetDepenses".
+2. Copier dans le projet les dossiers Models, Services, ViewModels.
+3. Remplacer MainPage.xaml et MainPage.xaml.cs par ceux du zip.
+4. Ajouter dans MauiProgram.cs le contenu de MauiProgram_extrait.cs.
+5. BaseViewModel.cs et RelayCommand.cs sont des versions de secours :
+   garde ceux de ton TP précédent s'ils ont SetField, OnPropertyChanged
+   et Rafraichir().
+6. Si AppShell crée MainPage, vérifier qu'il la résout via le conteneur
+   (ContentTemplate="{DataTemplate local:MainPage}").
+
+TEST
+Ajouter 3 dépenses, FERMER complètement l'application, la relancer :
+la liste doit réapparaître.
