@@ -19,7 +19,7 @@ namespace CarnetDepenses
 
 #if DEBUG
     		builder.Logging.AddDebug();
-            builder.Services.AddSingleton<IDepenseRepository, JsonDepenseRepository>();
+            builder.Services.AddSingleton<IDepenseRepository, SqliteDepenseRepository>();
             builder.Services.AddSingleton<DepensesViewModel>();
             builder.Services.AddSingleton<MainPage>();
             builder.Services.AddSingleton(new HttpClient(new FakeApiHandler()));
