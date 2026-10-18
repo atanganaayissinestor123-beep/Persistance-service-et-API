@@ -22,6 +22,8 @@ namespace CarnetDepenses
             builder.Services.AddSingleton<IDepenseRepository, JsonDepenseRepository>();
             builder.Services.AddSingleton<DepensesViewModel>();
             builder.Services.AddSingleton<MainPage>();
+            builder.Services.AddSingleton(new HttpClient(new FakeApiHandler()));
+            builder.Services.AddSingleton<IApiService, ApiService>();
 #endif
 
             return builder.Build();

@@ -31,5 +31,20 @@
         </DataTemplate>
       </CollectionView.ItemTemplate>
     </CollectionView>
+
+    <!-- PHASE B : bloc de conversion (Grid.Row="3") -->
+    <VerticalStackLayout Grid.Row="3" Spacing="6">
+      <HorizontalStackLayout Spacing="10">
+        <Switch IsToggled="{Binding SimulerPanne}"/>
+        <Label Text="Simuler une panne réseau"
+               VerticalOptions="Center"/>
+      </HorizontalStackLayout>
+      <Button Text="Convertir le total en EUR"
+              Command="{Binding ConvertirCommand}"/>
+      <ActivityIndicator IsRunning="{Binding IsBusy}"
+                         IsVisible="{Binding IsBusy}"/>
+      <Label Text="{Binding TotalConverti}" FontSize="16"/>
+      <Label Text="{Binding Message}"/>
+    </VerticalStackLayout>
   </Grid>
 </ContentPage>
